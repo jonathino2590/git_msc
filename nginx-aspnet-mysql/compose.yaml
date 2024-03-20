@@ -34,7 +34,7 @@ services:
   proxy:
     build: proxy
     ports:
-      - 80:80
+      - 9090:80
     depends_on: 
       - backend
 
