@@ -9,7 +9,7 @@ services:
       db:
         condition: service_healthy
     environment:
-      - ASPNETCORE_URLS=http://+:8000
+      - ASPNETCORE_URLS=http://+:9000
 
   db:
     # We use a mariadb image which supports both amd64 & arm64 architecture
