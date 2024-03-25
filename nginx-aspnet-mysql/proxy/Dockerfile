@@ -1,3 +1,4 @@
 FROM nginx:1.14-alpine
-EXPOSE 8080
+EXPOSE 5050
+ARG JAVA
 COPY conf /etc/nginx/conf.d/default.conf
