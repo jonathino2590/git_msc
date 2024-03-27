@@ -14,7 +14,7 @@ app.MapGet("/", (MySqlConnection connection) => {
 
     try
     {
-        Console.WriteLine("Connecting to Oracle...");
+        Console.WriteLine("Connecting to Mysql...");
         connection.Open();
 
         string sql = "SELECT title FROM blog";
