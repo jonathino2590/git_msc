@@ -11,6 +11,8 @@ FROM base as builder
 
 COPY . .
 
+COPY package.json ./
+
 CMD ["dotnet", "build", "-c", "-o", "/build"]
 
 FROM builder as dev-envs
