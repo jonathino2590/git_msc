@@ -14,12 +14,11 @@ Project structure:
 ```
 .
 ├── backend
-│   ├── Dockerfile_TST
+│   ├── Dockerfile
 │   ├── aspnet.csproj
 │   └── Program.cs
 ├── db
-│   └── password.log
-│   └── secret.txt
+│   └── password.txt
 ├── compose.yaml
 ├── proxy
 │   ├── conf
