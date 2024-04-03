@@ -19,7 +19,7 @@ FROM builder as dev-envs
 
 RUN <<EOF
 apt-get update
-apt-get install -y git
+apt-get install -y git vim
 EOF
 
 RUN <<EOF
