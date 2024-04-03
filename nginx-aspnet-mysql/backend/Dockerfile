@@ -30,9 +30,11 @@ EOF
 # install Docker tools (cli, buildx, compose)
 COPY --from=gloursdocker/docker / /
 
-CMD ["dotnet", "run"]
+CMD ["dotnet", "start"]
 
 FROM builder AS publisher
+
+EXPOSE 8080
 
 RUN ["dotnet", "publish", "-c", "Release", "-o", "/build"]
 
