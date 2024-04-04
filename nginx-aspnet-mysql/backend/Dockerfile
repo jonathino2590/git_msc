@@ -2,7 +2,7 @@
 
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:6.0 AS base
 
-WORKDIR /src
+WORKDIR /opt
 
 COPY aspnetapp.csproj ./
 RUN ["dotnet", "restore"]
