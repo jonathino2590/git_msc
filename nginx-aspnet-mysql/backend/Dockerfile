@@ -7,7 +7,7 @@ WORKDIR /opt
 COPY aspnetapp.csproj ./
 RUN ["dotnet", "restore"]
 
-FROM base as builder
+FROM base as produccion
 
 COPY . .
 
@@ -15,7 +15,7 @@ COPY package.json ./
 
 CMD ["dotnet", "build", "-c", "-o", "/build"]
 
-FROM builder as dev-envs
+FROM produccion as dev-envs
 
 RUN <<EOF
 apt-get update
@@ -32,7 +32,7 @@ COPY --from=gloursdocker/docker / /
 
 CMD ["dotnet", "start"]
 
-FROM builder AS publisher
+FROM produccion AS publisher
 
 EXPOSE 8080
 
