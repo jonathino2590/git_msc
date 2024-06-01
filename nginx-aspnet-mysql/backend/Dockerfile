@@ -34,7 +34,7 @@ CMD ["dotnet", "start"]
 
 FROM produccion AS publisher
 
-EXPOSE 8080
+EXPOSE 9090
 
 RUN ["dotnet", "publish", "-c", "Release", "-o", "/build"]
 
